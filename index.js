@@ -1,19 +1,19 @@
-import { ToyReact } from "./ToyReact.js";
-class MyComponent {
+import { ToyReact, Component } from "./ToyReact.js";
+class MyComponent extends Component{
   render(){
-    return <div><span>helloword</span></div>
+    return( 
+      <div>
+        <span>helloword</span>
+        <span>yanzx</span>
+        <p>{this.children}</p>
+      </div>
+    )
   }
-  setAttribute(name, value){
-    this[name] = value;
-  }
-  mountTo(parent) {
-    let vdom = this.render();
-    vdom.mountTo(parent);
-  }
-  
 }
 
-let a = <MyComponent name="a" id="ida"></MyComponent>
+let a = <MyComponent name="a" id="ida">
+  <div>123</div>
+</MyComponent>
 // let b = <div name="a" id="ida">
 //   <span>Hello</span>
 //   <span></span>
