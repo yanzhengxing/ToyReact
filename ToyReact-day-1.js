@@ -24,8 +24,11 @@ class TextWrapper {
 export class Component {
   constructor(){
     this.children = [];
+    // 创建一个干净的对象
+    this.props = Object.create(null);
   }
   setAttribute(name, value){
+    this.props[name] = value;
     this[name] = value;
   }
   mountTo(parent) {

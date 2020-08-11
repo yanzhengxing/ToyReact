@@ -1,4 +1,4 @@
-import { ToyReact, Component } from "./ToyReact.js";
+import { ToyReact, Component } from "./ToyReact-day-1.js";
 class MyComponent extends Component{
   render(){
     return( 
